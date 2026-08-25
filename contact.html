@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Chibamu Transport & Logistics — reliable plant and machinery hire in Goromonzi, Zimbabwe.">
+<title>Contact | Chibamu Transport & Logistics</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+ <div class="container nav">
+  <a class="brand" href="index.html"><span class="brand-mark">CT</span><span>CHIBAMU<small>TRANSPORT & LOGISTICS</small></span></a>
+  <nav class="nav-links" id="nav">
+   <a class="" href="index.html">Home</a>
+   <a class="" href="about.html">About</a>
+   <a class="active" href="contact.html">Contact</a>
+  </nav>
+  <a class="nav-cta" href="contact.html">Talk to Us</a>
+  <button class="mobile-toggle" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Open menu">☰</button>
+ </div>
+</header>
+
+<section class="page-hero"><div class="container"><span class="eyebrow">Start a conversation</span><h1>Let's understand the job first.</h1><p>Tell us what you're working on, what the site needs and when you need the machine. We'll help you identify the right equipment option.</p></div></section>
+<section class="contact">
+ <div class="container contact-grid">
+  <div>
+   <span class="kicker">Contact</span><h2>Talk through your project.</h2>
+   <p style="color:#666">For bookings and enquiries, contact Chibamu Transport & Logistics directly.</p>
+   <div class="contact-info">
+    <div class="contact-row"><div class="icon">☎</div><div><b>Phone</b><span>+263 787 654 460<br>+263 775 848 874</span></div></div>
+    <div class="contact-row"><div class="icon">✉</div><div><b>Email</b><span>chibamulogistics@gmail.com</span></div></div>
+    <div class="contact-row"><div class="icon">⌖</div><div><b>Location</b><span>14 Range Farm, Arcturus, Goromonzi, Zimbabwe</span></div></div>
+   </div>
+   <div style="margin-top:30px;display:flex;gap:10px;flex-wrap:wrap">
+    <a class="btn btn-primary" href="https://wa.me/263787654460?text=Hi%20Chibamu%20Transport%20%26%20Logistics%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn btn-dark" href="tel:+263787654460">Call +263 787 654 460</a>
+   </div>
+  </div>
+  <form class="form" onsubmit="sendWhatsApp(event)">
+   <div class="form-grid">
+    <div class="field"><label for="name">NAME</label><input id="name" required placeholder="Your name"></div>
+    <div class="field"><label for="phone">PHONE / WHATSAPP</label><input id="phone" required placeholder="+263 ..."></div>
+    <div class="field full"><label for="machine">MACHINE NEEDED</label><select id="machine"><option>I'm not sure yet</option><option>Excavator</option><option>Front End Loader</option><option>JCB</option></select></div>
+    <div class="field full"><label for="details">TELL US ABOUT THE PROJECT</label><textarea id="details" required placeholder="What work needs to be done, where is the site, and when do you need the machine?"></textarea></div>
+   </div>
+   <button class="btn btn-primary" type="submit">Send Project Details →</button>
+   <p class="note">This demo uses WhatsApp for enquiries, so it works on a static GitHub Pages website without a backend.</p>
+  </form>
+ </div>
+</section>
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value;
+ const phone=document.getElementById('phone').value;
+ const machine=document.getElementById('machine').value;
+ const details=document.getElementById('details').value;
+ const msg=`Hi Chibamu Transport & Logistics. My name is ${name}. Phone/WhatsApp: ${phone}. Machine: ${machine}. Project details: ${details}`;
+ window.open('https://wa.me/263787654460?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
+
+<a class="whatsapp" href="https://wa.me/263787654460?text=Hi%20Chibamu%20Transport%20%26%20Logistics%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us</a>
+<footer class="footer">
+ <div class="container footer-row">
+  <div><strong>CHIBAMU TRANSPORT & LOGISTICS</strong><br><span>Plant & Machinery Hire · Moving You Forward</span></div>
+  <div>+263 787 654 460 · +263 775 848 874</div>
+ </div>
+</footer>
+</body>
+</html>
